@@ -1,2 +1,2 @@
 # intermediate-python
-This repos contains code examples from book "Intermediate Python" (https://github.com/yasoob/intermediatePython)
+This repo contains code snippets based on "Intermediate Python" book (https://github.com/yasoob/intermediatePython)
