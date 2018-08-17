@@ -13,6 +13,3 @@ def profile_tuple():
 
 profile_result = profile_tuple()
 print('-> Profile tuple: {}, {}'.format(profile_result[0], profile_result[1]))
-
-###
-from collection import namedtuple
