@@ -1,15 +1,31 @@
+print('-> Without slots:')
+
 class WithoutSlots(object):
-    def __init__(self, name, identifier):
-        self.name = name
-        self.identifier = identifier
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-a = WithoutSlots('no slots', 1)
+a = WithoutSlots(1, 2)
+a.c = 1
+print(a.__dict__)
 
+#
+print('-> With slots:')
 
 class WithSlots(object):
-    __slots__ = ['name', 'identifier']
-    def __init__(self, name, identifier):
-        self.name = name
-        self.identifier = identifier
+    __slots__ = ['a', 'b']
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-b = WithoutSlots('slots', 2)
+b = WithSlots(1, 2)
+
+try:
+    b.c = 3
+except AttributeError as e:
+    print('Error: ', e)
+
+try:
+    print(b.__dict__)
+except AttributeError as e:
+    print('Error: ', e)
