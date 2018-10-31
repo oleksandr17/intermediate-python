@@ -30,9 +30,9 @@ def decorator_authorise(func):
 
     def wrapper(request):
         if request['user'] == 'admin':
-            print('User is not admin. Request can not be handled.')
+            print('User is admin. Handle request.')
             return
-        print('User is admin.x§')
+        print('User is not admin. Do not handle request.')
         func(request)
 
     return wrapper
